@@ -1,5 +1,5 @@
 export const STORE_NAME = 'Tech Components';
-export const STORE_WHATSAPP_NUMBER = '01287957733';
+export const STORE_WHATSAPP_NUMBER = '201287957733';
 
 export const STORE_CONTACT = {
   phone: STORE_WHATSAPP_NUMBER,
