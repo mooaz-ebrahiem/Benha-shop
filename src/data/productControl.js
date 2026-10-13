@@ -90,6 +90,10 @@ export const price_BluetoothHc05 = 360;
 export const oldPrice_BluetoothHc05 = 390;
 export const discount_BluetoothHc05 = 20;
 
+export const price_BluetoothHc05Module = 230;
+export const oldPrice_BluetoothHc05Module = 275;
+export const discount_BluetoothHc05Module = 20;
+
 export const price_Tp4056 = 20;
 export const oldPrice_Tp4056 = 40;
 export const discount_Tp4056 = 20;
