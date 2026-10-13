@@ -302,9 +302,17 @@ export const price_4wdRobotKit = 1900;
 export const oldPrice_4wdRobotKit = 2000;
 export const discount_4wdRobotKit = 20;
 
+export const price_RobotSmartCar2wd = 280;
+export const oldPrice_RobotSmartCar2wd = 330;
+export const discount_RobotSmartCar2wd = 24;
+
 export const price_RobotChassisKit = 470;
 export const oldPrice_RobotChassisKit = 500;
 export const discount_RobotChassisKit = 14;
+
+export const price_BluetoothHc05_not_original = 280;
+export const oldPrice_BluetoothHc05_not_original = 300;
+export const discount_BluetoothHc05_not_original = 20;
 
 export const price_RoboticArm5Dof = 2000;
 export const oldPrice_RoboticArm5Dof = 2200;
