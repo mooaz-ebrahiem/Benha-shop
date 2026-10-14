@@ -66,6 +66,10 @@ export const price_Ttp223 = 20;
 export const oldPrice_Ttp223 = 35;
 export const discount_Ttp223 = 20;
 
+export const price_Mpu6050 = 130;
+export const oldPrice_Mpu6050 = 170;
+export const discount_Mpu6050 = 20;
+
 export const price_Sg90Servo = 90;
 export const oldPrice_Sg90Servo = 120;
 export const discount_Sg90Servo = 20;
