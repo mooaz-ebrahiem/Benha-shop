@@ -62,7 +62,9 @@ export const price_FlameSensor = 35;
 export const oldPrice_FlameSensor = 55;
 export const discount_FlameSensor = 20;
 
-export const price_IrObstacleAvoidance = 35;
+export const price_IrObstacleAvoidance = 45;
+export const oldPrice_IrObstacleAvoidance = 60;
+export const discount_IrObstacleAvoidance = 20;
 
 export const price_Ttp223 = 20;
 export const oldPrice_Ttp223 = 35;
