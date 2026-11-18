@@ -1891,7 +1891,7 @@ export const products = [
     price: price_MetalPowerSupply220v5v5a,
     oldPrice: oldPrice_MetalPowerSupply220v5v5a,
     discount: discount_MetalPowerSupply220v5v5a,
-    image: '/metal-power-supply-220v-5v-5a.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7p9XDY00A9rd8uQN-Q2OzX7Ot3_-dzq7-UDtrFhmJpQ&s=10',
     stock: 15,
     sku: 'PWR-220V-5V-5A',
     specifications: {

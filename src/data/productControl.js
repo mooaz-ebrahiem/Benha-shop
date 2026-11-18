@@ -331,7 +331,7 @@ export const oldPrice_DcAdapter5v = null;
 export const discount_DcAdapter5v = 20;
 
 export const price_MetalPowerSupply220v5v5a = 250;
-export const oldPrice_MetalPowerSupply220v5v5a = 200;
+export const oldPrice_MetalPowerSupply220v5v5a = 280;
 export const discount_MetalPowerSupply220v5v5a = 19;
 
 export const price_BreadboardPowerSupply = 40;
