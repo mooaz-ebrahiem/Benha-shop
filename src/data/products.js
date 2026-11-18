@@ -665,7 +665,7 @@ export const products = [
     price: price_StepperMotor28byj48,
     oldPrice: oldPrice_StepperMotor28byj48,
     discount: discount_StepperMotor28byj48,
-    image: '/28byj-48-stepper-motor-uln2003.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfSwILSEFkdUjmtbUqt1qQuHwmJHorKmIDxEe_hsef8g&s=10',
     stock: 20,
     sku: 'MOT-28BYJ48-ULN2003',
     specifications: {
