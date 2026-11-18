@@ -526,7 +526,7 @@ export const products = [
     price: price_Tcs34725,
     oldPrice: oldPrice_Tcs34725,
     discount: discount_Tcs34725,
-    image: '/tcs34725-rgb-color-sensor.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbunO-Dvtbgyvt5OgDIksq2gf4tbILzegDZnu4xLzvvg&s=10',
     stock: 20,
     sku: 'SEN-TCS34725',
     specifications: {
