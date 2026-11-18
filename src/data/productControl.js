@@ -62,7 +62,7 @@ export const price_FlameSensor = 35;
 export const oldPrice_FlameSensor = 55;
 export const discount_FlameSensor = 20;
 
-export const price_IrObstacleAvoidance = 45;
+export const price_IrObstacleAvoidance = 40;
 export const oldPrice_IrObstacleAvoidance = 60;
 export const discount_IrObstacleAvoidance = 20;
 
@@ -325,6 +325,10 @@ export const discount_DcAdapter12v = 20;
 export const price_DcAdapter5v = 55;
 export const oldPrice_DcAdapter5v = null;
 export const discount_DcAdapter5v = 20;
+
+export const price_MetalPowerSupply220v5v5a = 250;
+export const oldPrice_MetalPowerSupply220v5v5a = 200;
+export const discount_MetalPowerSupply220v5v5a = 19;
 
 export const price_BreadboardPowerSupply = 40;
 export const oldPrice_BreadboardPowerSupply = 50;
