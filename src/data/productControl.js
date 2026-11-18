@@ -90,6 +90,10 @@ export const price_Mg995Servo = 230;
 export const oldPrice_Mg995Servo = 250;
 export const discount_Mg995Servo = 20;
 
+export const price_StepperMotor28byj48 = 110;
+export const oldPrice_StepperMotor28byj48 = 150;
+export const discount_StepperMotor28byj48 = 20;
+
 export const price_Mg996rServo180 = 230;
 export const oldPrice_Mg996rServo180 = null;
 export const discount_Mg996rServo180 = 0;
@@ -122,8 +126,8 @@ export const price_Tp4056 = 20;
 export const oldPrice_Tp4056 = 40;
 export const discount_Tp4056 = 20;
 
-export const price_Battery18650 = 50;
-export const oldPrice_Battery18650 = 80;
+export const price_Battery18650 = 70;
+export const oldPrice_Battery18650 = 100;
 export const discount_Battery18650 = 20;
 
 export const price_BatteryHolder3AA = 15;
