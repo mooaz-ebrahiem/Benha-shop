@@ -72,7 +72,7 @@ export const discount_Ttp223 = 20;
 
 export const price_Mpu6050 = 130;
 export const oldPrice_Mpu6050 = 170;
-export const discount_Mpu6050 = 20;
+export const discount_Mpu6050 = 35;
 
 export const price_Tcs34725 = 360;
 export const oldPrice_Tcs34725 = 475;
@@ -372,6 +372,10 @@ export const discount_AcSwitch = 20;
 export const price_Buzzer3to24Vdc = 33.5;
 export const oldPrice_Buzzer3to24Vdc = null;
 export const discount_Buzzer3to24Vdc = 20;
+
+export const price_SmallBuzzer5v = 13;
+export const oldPrice_SmallBuzzer5v = 18;
+export const discount_SmallBuzzer5v = 15;
 //--------------------Wheels & Tools &Accessories-----------------------
 export const price_MetalCasterWheel30mm = 50;
 export const oldPrice_MetalCasterWheel30mm = 60;
@@ -380,4 +384,9 @@ export const discount_MetalCasterWheel30mm = 20;
 export const price_Clipper = 100;
 export const oldPrice_Clipper = null; 
 export const discount_Clipper = 20;
+
+//--------------------Screws & Nuts-----------------------
+export const price_MachineScrew3mm40mm = 2;
+export const oldPrice_MachineScrew3mm40mm = null;
+export const discount_MachineScrew3mm40mm = 0;
 
