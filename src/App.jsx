@@ -52,7 +52,7 @@ const formatCurrency = (value) =>
 
 const buildWhatsAppMessage = ({ name, phone, governorate, address, notes, cartItems }) => {
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  const delivery = DELIVERY_COST;
+  const delivery = subtotal > 50 ? DELIVERY_COST : 0;
   const total = subtotal + delivery;
   const LRM = '\u200E';
 
@@ -634,7 +634,8 @@ function CartPage() {
   const { cart, updateCartQuantity, removeFromCart, clearCart } = useStore();
   const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-  const total = subtotal + DELIVERY_COST;
+  const delivery = subtotal > 50 ? DELIVERY_COST : 0;
+  const total = subtotal + delivery;
 
   if (cart.length === 0) {
     return (
@@ -682,9 +683,15 @@ function CartPage() {
           <h3>Order Summary</h3>
           <div className="summary-row"><span>Items</span><strong>{totalQuantity}</strong></div>
           <div className="summary-row"><span>Subtotal</span><strong>{formatCurrency(subtotal)}</strong></div>
-          <div className="summary-row"><span>Delivery</span><strong>{formatCurrency(DELIVERY_COST)}</strong></div>
+          {delivery > 0 && (
+            <div className="summary-row"><span>Delivery</span><strong>{formatCurrency(delivery)}</strong></div>
+          )}
           <div className="summary-row total"><span>Total</span><strong>{formatCurrency(total)}</strong></div>
-          <p className="delivery-note">A fixed delivery cost of EGP 20 is included in the total.</p>
+          <p className="delivery-note">
+            {delivery > 0
+              ? 'A delivery cost of EGP 20 is included in the total.'
+              : 'Delivery is free for orders of EGP 50 or less.'}
+          </p>
           <Link to="/checkout" className="primary-button full-width">Proceed to Checkout</Link>
           <button type="button" className="secondary-button full-width" onClick={clearCart}>Clear cart</button>
         </aside>
@@ -704,7 +711,8 @@ function CheckoutPage() {
   });
 
   const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-  const total = subtotal + DELIVERY_COST;
+  const delivery = subtotal > 50 ? DELIVERY_COST : 0;
+  const total = subtotal + delivery;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -779,9 +787,15 @@ function CheckoutPage() {
             </div>
           ))}
           <div className="summary-row"><span>Subtotal</span><strong>{formatCurrency(subtotal)}</strong></div>
-          <div className="summary-row"><span>Delivery</span><strong>{formatCurrency(DELIVERY_COST)}</strong></div>
+          {delivery > 0 && (
+            <div className="summary-row"><span>Delivery</span><strong>{formatCurrency(delivery)}</strong></div>
+          )}
           <div className="summary-row total"><span>Total</span><strong>{formatCurrency(total)}</strong></div>
-          <p className="delivery-note">A fixed delivery cost of EGP 20 is included in the total.</p>
+          <p className="delivery-note">
+            {delivery > 0
+              ? 'A delivery cost of EGP 20 is included in the total.'
+              : 'Delivery is free for orders of EGP 50 or less.'}
+          </p>
         </aside>
       </div>
     </main>
