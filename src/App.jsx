@@ -52,28 +52,32 @@ const formatCurrency = (value) =>
 const buildWhatsAppMessage = ({ name, phone, governorate, address, notes, cartItems }) => {
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   const total = subtotal;
+  const LRM = '\u200E';
 
   const itemsText = cartItems
-    .map(
-      (item, index) => `${index + 1}x ${item.name} - EGP ${item.price * item.quantity}`,
-    )
-    .join('\n');
+    .map((item, index) => {
+      return [
+        `${index + 1}. ${LRM}${item.name}`,
+        `الكمية: ${item.quantity} - السعر: ${item.price * item.quantity} جنيه`,
+      ].join('\n');
+    })
+    .join('\n\n');
 
   return [
-    'مرحبا، أود تقديم طلب:',
-    '',
-    'Customer Details:',
-    `Name: ${name}`,
-    `Phone: ${phone}`,
-    `Address: ${governorate}, ${address}`,
-    '',
-    'Products:',
+    '*طلب جديد من الموقع*',
+    '----------------------',
+    '*بيانات العميل:*',
+    `الاسم: ${name}`,
+    `التليفون: ${phone}`,
+    `العنوان: ${governorate} - ${address}`,
+    '----------------------',
+    '*المنتجات:*',
     itemsText,
+    '----------------------',
+    `الاجمالي الفرعي: ${subtotal} جنيه`,
+    `*الاجمالي: ${total} جنيه*`,
     '',
-    `Subtotal: EGP ${subtotal}`,
-    `Total: EGP ${total}`,
-    '',
-    `Notes: ${notes || 'No additional notes'}`,
+    `ملاحظات: ${notes || 'لا يوجد'}`,
   ].join('\n');
 };
 
