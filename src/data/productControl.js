@@ -38,7 +38,7 @@ export const price_Lm2596BuckConverter = 50;
 export const oldPrice_Lm2596BuckConverter = 80;
 export const discount_Lm2596BuckConverter = 50;
 // ----------Esp32-------------
-export const price_ESP32 = 320;
+export const price_ESP32 = 370;
 export const oldPrice_ESP32 = 500;
 export const discount_ESP32 = 20;
 // -------------------------sensors-----------------------
@@ -74,7 +74,7 @@ export const price_Mpu6050 = 130;
 export const oldPrice_Mpu6050 = 170;
 export const discount_Mpu6050 = 35;
 
-export const price_Tcs34725 = 360;
+export const price_Tcs34725 = 390;
 export const oldPrice_Tcs34725 = 475;
 export const discount_Tcs34725 = 32;
 
@@ -122,7 +122,7 @@ export const price_BluetoothHc05Module = 230;
 export const oldPrice_BluetoothHc05Module = 275;
 export const discount_BluetoothHc05Module = 20;
 //--------------------Batteries-----------------------
-export const price_Tp4056 = 20;
+export const price_Tp4056 = 25;
 export const oldPrice_Tp4056 = 40;
 export const discount_Tp4056 = 20;
 
@@ -234,7 +234,7 @@ export const price_L293dDriver = 90;
 export const oldPrice_L293dDriver = 110;
 export const discount_L293dDriver = 20;
 
-export const price_Pca9685Driver = 220;
+export const price_Pca9685Driver = 230;
 export const oldPrice_Pca9685Driver = 265;
 export const discount_Pca9685Driver = 20;
 //--------------------Relays-----------------------
@@ -334,7 +334,7 @@ export const price_MetalPowerSupply220v5v5a = 250;
 export const oldPrice_MetalPowerSupply220v5v5a = 280;
 export const discount_MetalPowerSupply220v5v5a = 19;
 
-export const price_BreadboardPowerSupply = 40;
+export const price_BreadboardPowerSupply = 45;
 export const oldPrice_BreadboardPowerSupply = 50;
 export const discount_BreadboardPowerSupply = 20;
 //--------------------Connectors-----------------------
@@ -357,7 +357,7 @@ export const oldPrice_BluetoothHc05_not_original = 300;
 export const discount_BluetoothHc05_not_original = 20;
 
 //--------------------Switches-----------------------
-export const price_MiniOnOffSwitch = 5;
+export const price_MiniOnOffSwitch = 6;
 export const oldPrice_MiniOnOffSwitch = null;
 export const discount_MiniOnOffSwitch = 20;
 
@@ -365,7 +365,7 @@ export const price_MicroLimitSwitchWithRoller = 13;
 export const oldPrice_MicroLimitSwitchWithRoller = 15;
 export const discount_MicroLimitSwitchWithRoller = 15;
 
-export const price_AcSwitch = 5;
+export const price_AcSwitch = 6;
 export const oldPrice_AcSwitch = null;
 export const discount_AcSwitch = 20;
 //--------------------Buzzers-----------------------
