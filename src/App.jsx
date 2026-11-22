@@ -34,6 +34,7 @@ import { useStore } from './context/StoreContext';
 
 const PRODUCT_FALLBACK_IMAGE = '/product-fallback.svg';
 const MAX_PRODUCT_PRICE = 3000;
+const DELIVERY_COST = 20;
 
 const handleProductImageError = (event) => {
   const image = event.currentTarget;
@@ -51,7 +52,8 @@ const formatCurrency = (value) =>
 
 const buildWhatsAppMessage = ({ name, phone, governorate, address, notes, cartItems }) => {
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  const total = subtotal;
+  const delivery = DELIVERY_COST;
+  const total = subtotal + delivery;
   const LRM = '\u200E';
 
   const itemsText = cartItems
@@ -75,6 +77,7 @@ const buildWhatsAppMessage = ({ name, phone, governorate, address, notes, cartIt
     itemsText,
     '----------------------',
     `الاجمالي الفرعي: ${subtotal} جنيه`,
+    `رسوم التوصيل: ${delivery} جنيه`,
     `*الاجمالي: ${total} جنيه*`,
     '',
     `ملاحظات: ${notes || 'لا يوجد'}`,
@@ -631,7 +634,7 @@ function CartPage() {
   const { cart, updateCartQuantity, removeFromCart, clearCart } = useStore();
   const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-  const total = subtotal;
+  const total = subtotal + DELIVERY_COST;
 
   if (cart.length === 0) {
     return (
@@ -679,8 +682,9 @@ function CartPage() {
           <h3>Order Summary</h3>
           <div className="summary-row"><span>Items</span><strong>{totalQuantity}</strong></div>
           <div className="summary-row"><span>Subtotal</span><strong>{formatCurrency(subtotal)}</strong></div>
+          <div className="summary-row"><span>Delivery</span><strong>{formatCurrency(DELIVERY_COST)}</strong></div>
           <div className="summary-row total"><span>Total</span><strong>{formatCurrency(total)}</strong></div>
-          <p className="delivery-note">Delivery cost will be confirmed with you after placing the order, depending on your location.</p>
+          <p className="delivery-note">A fixed delivery cost of EGP 20 is included in the total.</p>
           <Link to="/checkout" className="primary-button full-width">Proceed to Checkout</Link>
           <button type="button" className="secondary-button full-width" onClick={clearCart}>Clear cart</button>
         </aside>
@@ -700,7 +704,7 @@ function CheckoutPage() {
   });
 
   const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-  const total = subtotal;
+  const total = subtotal + DELIVERY_COST;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -775,8 +779,9 @@ function CheckoutPage() {
             </div>
           ))}
           <div className="summary-row"><span>Subtotal</span><strong>{formatCurrency(subtotal)}</strong></div>
+          <div className="summary-row"><span>Delivery</span><strong>{formatCurrency(DELIVERY_COST)}</strong></div>
           <div className="summary-row total"><span>Total</span><strong>{formatCurrency(total)}</strong></div>
-          <p className="delivery-note">Delivery cost will be confirmed with you after placing the order, depending on your location.</p>
+          <p className="delivery-note">A fixed delivery cost of EGP 20 is included in the total.</p>
         </aside>
       </div>
     </main>
